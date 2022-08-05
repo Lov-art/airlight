@@ -1,0 +1,235 @@
+@media screen and (max-width: 1024px) {
+    .news-link {
+        font-size: 12px;
+    }
+    .news-card-title {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 991px) {
+    main{
+        margin-top: 70px;
+    }
+    header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        background: white;
+    }
+    .first-line,
+    .second-line{
+        display: none;
+    }
+    .header-mob{
+        display: block;
+    }
+    .footer-mob{
+        display: block;
+    }
+    .footer-desc{
+      display: none;
+    }
+    .nav-link{
+        font-weight: 600 !important;
+        font-size: 24px !important;
+        line-height: 28px !important;
+        color: #FFFFFF !important;
+        margin-bottom: 20px;
+    }
+    .menu-line{
+        width: 100%;
+        height: 1px;
+        background: white;
+        margin-bottom: 14px;
+    }
+    .box .contact-box{
+        margin-bottom: 11px;
+    }
+    .box .contact-box .contact-title{
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;
+    }
+    .box .contact-box .contact{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+    .box .social-network{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .banner{
+        position: relative;
+        margin-bottom: 280px;
+        align-items: start;
+        padding-top: 30%;
+    }
+    .banner-title{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    #donate-form{
+        position: absolute;
+        bottom: -250px;
+        right: 1rem;
+        left: 1rem;
+    }
+    .flipcard {
+        width: 100%;
+    }
+    .help-img {
+        max-width: 100%;
+    }
+    .points-row img{
+        width: 45%;
+    }
+    .our-help .donate{
+        margin: 2rem 0;
+    }
+    .news-card{
+        max-width: 100%;
+        width: 100%;
+    }
+    .partners-link{
+        max-width: 45%;
+    }
+    .partners-link img{
+        width: 100%;
+    }
+    .volunteer .section-title{
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .volunteer .section-text{
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+    .footer-mob .menu-line{
+        height: 1px;
+        margin: 2rem 0;
+    }
+    .footer-links .nav-link{
+        font-weight: 600 !important;
+        font-size: 12px !important;
+        margin-bottom: 0;
+    }
+    .footer-text{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .contact-title{
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .contact{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .section-title{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .section-text{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .borBot .section-text span, .help-count{
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .questionnaire .fixed-box{
+        display: none;
+    }
+    #close-form{
+        padding-right: 0;
+    }
+    .questionnaire-form-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .input-box label {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 15px;
+    }
+    .input-box input, .input-box select{
+        width: 100%;
+        height: 36px;
+        padding-left: 12px;
+    }
+    .input-box{
+        margin-bottom: 1rem;
+    }
+    .form_input-box input::placeholder
+    .form_input-box textarea::placeholder{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .form-submit{
+        margin-bottom: 1rem;
+    }
+    .container-box,
+    .container-box2{
+        width: 40%;
+        font-size: 14px !important;
+        line-height: 17px !important;
+    }
+    .agreement-link{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .container-box2{
+        width: 100%;
+    }
+    #mail-form{
+        overflow-x: hidden;
+    }
+    .modal-body {
+        max-width: 90%;
+        height: 315px;
+    }
+    #socialBox{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+}
+@media screen and (max-width: 320px){
+    .donate-form {
+        padding: 15px 10px;
+    }
+    .nav-link {
+        font-size: 16px !important;
+        line-height: 16px !important;
+        margin-bottom: 0px;
+    }
+    .donate {
+        height: 30px;
+        font-size: 12px;
+    }
+    .lang-mob {
+        font-size: 10px;
+    }
+}
+@media screen and (max-height: 616px){
+    .banner {
+        padding-top: 15%;
+    }
+}

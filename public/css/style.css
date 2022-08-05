@@ -1,0 +1,1186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000139;
+    background: #E5E5E5;
+}
+a,
+a:hover{
+    text-decoration: none;
+    transition: .5s;
+}
+p{
+    margin: 0;
+}
+section{
+    margin-bottom: 100px;
+}
+.navbar-brand.logo{
+    width: 60px;
+    height: 54px;
+}
+.header-mob .donate{
+    background: #ffffff;
+    width: 100%;
+    color: #000000;
+}
+.header-mob{
+    display: none;
+}
+.lang-mob{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 95.5%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.navbar-expand-lg .navbar-collapse {
+    flex-direction: column;
+}
+.navbar-toggler{
+    border-radius: 4px;
+    width: 42px;
+    height: 42px;
+    background: #3498DB  no-repeat top 50% left 50%;
+}
+.navbar-toggler[aria-expanded="false"]{
+    background-image: url(../img/svg/header-mob.svg);
+}
+.navbar-toggler[aria-expanded="true"]{
+    background-image: url(../img/svg/close_24px.svg);
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.first-line{
+    background: #3498DB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+}
+.first-line .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tel{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+.tel svg{
+    margin-left: 0.5rem;
+}
+.tel:hover{
+    color: #ffe1e1;
+}
+.tel:hover svg path{
+    transition: .5s;
+    fill: #ffe1e1;
+}
+.social-network{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+}
+.social-network a{
+    width: 24px;
+    height: 24px;
+}
+.facebook{
+    background: url('../img/svg/facebook.svg') no-repeat;
+}
+.telegram{
+    background: url('../img/svg/telegram.svg') no-repeat;
+}
+.youtube{
+    background: url('../img/svg/youtube.svg') no-repeat;
+}
+.linkedin{
+    background: url('../img/svg/linkedin.svg') no-repeat;
+}
+.instagram{
+    background: url('../img/svg/instagram.svg') no-repeat;
+}
+.second-line{
+    width: 100%;
+}
+.second-line .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 92px;
+    height: 85px;
+    background: url("../img/logo.png") no-repeat;
+    background-size: cover;
+}
+nav{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .nav-link{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000139;
+    border-bottom: 3px solid transparent;
+}
+nav .nav-link:hover,
+nav .nav-link:focus{
+    color: #000139;
+    border-bottom: 3px solid #000139;
+}
+.header_btn_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+}
+.donate{
+    height: 48px;
+    width: fit-content;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #3498DB;
+    border-radius: 64px;
+}
+.donate svg{
+    margin-left: 0.5rem;
+}
+.donate:hover svg path,
+.donate:hover{
+    color: #FFFFFF;
+    fill: #fa6154;
+    transition: 0.5s;
+    background: #1ea8ff;
+}
+select[name="lang-switch"]{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh;
+    background: url("../img/BG.jpg") no-repeat;
+    background-size: cover;
+}
+.banner .container .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-title{
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FFFFFF;
+}
+.donate-form{
+    background: #B9E5FC;
+    box-shadow: 0px 4px 27px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 40px 32px;
+}
+.form-title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133.4%;
+    text-align: center;
+    color: #000139;
+    margin-bottom: 1.5rem;
+}
+.form_input-box{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+.form_input-box label{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000139;
+    margin-bottom: 10px;
+
+}
+.form_input-box input{
+    border: none;
+    border-bottom:2px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000139;
+    padding-bottom: 11px;
+}
+.form_input-box input::placeholder{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.radio-box{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    max-width: fit-content;
+}
+.radio-box label{
+    height: 48px;
+    width: 96px;
+    position: relative;
+}
+/* Hide the browser's default radio button */
+.radio-box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    height: 48px;
+    width: 96px;
+    background-color: #ffffff;
+    border-radius: 31px;
+    z-index: 5;
+}
+.rad-text{
+    z-index: 10;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000139;
+}
+/* On mouse-over, add a grey background color */
+.radio-box:hover input ~ .checkmark {
+    background-color: #eee;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-box input:checked ~ .checkmark {
+    background-color: #000139;
+}
+.radio-box input:checked ~ .rad-text {
+    color: #ffffff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-box input:checked ~ .checkmark:after {
+    display: block;
+}
+.donate-form button{
+    width: 100%;
+    height: 48px;
+    background: #000139;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 89px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+}
+.section-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 54px;
+}
+.section-text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+.cards-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.flipcard {
+    position: relative;
+    width: 32%;
+    height: 360px;
+    perspective: 500px;
+
+
+}
+.blue .front,
+.blue .back{
+    background: rgba(18, 203, 196, 0.25);
+    border-radius: 12px;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+}
+.green .front,
+.green .back{
+    background: rgba(196, 229, 56, 0.25);
+    border-radius: 12px;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+}
+.yellow .front,
+.yellow .back{
+    background: rgba(0, 168, 255, 0.25);
+    border-radius: 12px;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+}
+.card-text{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000139;
+    text-align: center;
+}
+.back .card-text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+.flipcard.h:hover .front, .flipcard.h.flip .front{
+    transform: rotateY(180deg);
+}
+.flipcard.h:hover .back, .flipcard.h.flip .back{
+    transform: rotateY(0deg);
+}
+.flipcard.h .back{
+    transform: rotateY(-180deg);
+}
+.flipcard .front, .flipcard .back
+{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in;
+    backface-visibility: hidden;
+}
+.flipcard img
+{
+    max-width: 190px;
+}
+.bg-sec{
+    height: 448px;
+}
+.bg-sec1{
+    background: url("../img/bgsec1.png") no-repeat;
+    background-size: cover;
+}
+.bg-sec .section-title{
+    color: white;
+}
+.bg-sec .donate{
+    background: white;
+    color: #000139;
+    min-width: 30%;
+}
+.borBot{
+    padding-bottom: 13px;
+    border-bottom: 1px solid #000139;
+}
+.borBot .section-text span,
+.help-count{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000139;
+}
+.help-text{
+    height: 24px;
+    width: 199px;
+    left: 153px;
+    top: 4118px;
+}
+.our-help .donate{
+    padding-left: 52px;
+    padding-right: 52px;
+    background: #000139;
+}
+.help-img{
+    max-width: 569px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);
+}
+.points{
+    width: 100%;
+    border-radius: 8px;
+}
+.news-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.news-card{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    min-height: 448px;
+    padding: 0;
+    max-width: 30%;
+    margin-bottom: 30px;
+}
+.news-card img{
+    width: 100%;
+}
+.card-body{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 255px;
+}
+.news-card-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+.news-card-date{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #95A5A6;
+    position: relative;
+    padding-left: 1rem;
+    max-width: fit-content;
+}
+.news-card-date:after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: url("../img/svg/access_time_24px.svg") no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 10%;
+    display: block;
+    position: absolute;
+}
+
+.share-btn > a:hover {
+    cursor: pointer;
+}
+.news-link{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #3498DB;
+    max-width: fit-content;
+}
+.news-link svg{
+    margin-left: 1rem;
+}
+.news-share{
+    max-width: fit-content;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.collapse-btn{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000139;
+    border-radius: 64px;
+    padding: 0 74px;
+    max-width: 390px;
+    height: 48px;
+}
+.collapse-btn svg{
+    margin-left: 1rem;
+}
+.collapse-btn svg path{
+    stroke: #000139;
+}
+.partners-link{
+    max-width: 33%;
+}
+.volunteer{
+    background: url("../img/501.png") no-repeat;
+    background-size: cover;
+}
+.volunteer .container{
+    min-height: 448px;
+}
+.volunteer .section-title,
+.volunteer .section-text{
+    color: #FFFFFF;
+}
+.volunteer .section-text{
+    max-width: 50%;
+}
+.volunteer .section-title{
+    margin-bottom: 0;
+}
+.news-modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.6s;
+    opacity: 0;
+
+}
+.modal-body{
+    max-width: 50%;
+    height: 256px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 25px 36px;
+    position: relative;
+
+}
+.modal-title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000139;
+    margin-bottom: 1.5rem;
+}
+#close_modal{
+    outline: none;
+    background: transparent;
+    max-width: fit-content;
+    position: absolute;
+    right: 0;
+    top: -3rem;
+    border: none;
+}
+#close_modal:hover svg path{
+    fill: #023f60;
+    transition: 0.6s;
+}
+footer{
+    background: #3498DB;
+    color: #FFFFFF;
+    padding: 39px 0;
+}
+footer .social-network{
+    width: 100%;
+}
+footer .nav-link{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 43px;
+    color: #FFFFFF;
+}
+.contact-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+.footer-img{
+    max-width: 120px;
+}
+.contact-box button,
+.contact-box button:hover{
+    border: none;
+    outline: none;
+    background: transparent;
+    max-width: fit-content;
+}
+.contact,
+.contact:hover{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+}
+.sm-text{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+}
+.points-row{
+    gap: 2rem;
+}
+.points-row img{
+    width: 23%;
+}
+
+.questionnaire-box{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(165, 164, 164, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    opacity: 0;
+    transition: 1;
+}
+.questionnaire{
+    max-width: 85%;
+    height: 70vh;
+    background: white;
+    border-radius: 16px;
+    position: relative;
+
+}
+.fixed-box{
+    background:#3498DB url("../img/Frame.png") no-repeat bottom;
+    box-shadow: 9px 0px 15px -7px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding-top: 28px;
+    color: #FFFFFF;
+}
+.fixed-box img{
+    margin-bottom: 15%;
+}
+.questionnaire-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 19px;
+}
+.questionnaire-text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+.questionnaire form::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+.questionnaire form::-webkit-scrollbar-thumb {
+    /*box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);*/
+    /*max-height: 30px;*/
+}
+.questionnaire form {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    overflow-y: scroll;
+    scrollbar-color: #000139 #ffffff;
+    scrollbar-width: thin;
+    scrollbar-height:40px;
+    max-height: 70vh;
+    position: relative;
+}
+
+
+
+.questionnaire-form-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+.input-box label{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 12px;
+}
+.input-box input,
+.input-box select{
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 168, 255, 0.08);
+    border: 1px solid rgba(0, 1, 57, 0.3);
+    border-radius: 4px;
+    padding-left: 20px;
+}
+.input-box select{
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    background-image: url("../img/svg/arrow_drop_down_24px.svg");
+    background-repeat: no-repeat;
+    background-position: top 50% right 1rem;
+    position: relative;
+}
+.form-radio-box{
+    display: flex;
+    align-items: center;
+}
+.form-radio-box p{
+   max-width: fit-content;
+    margin-right: 3rem;
+}
+
+.modal-radio:checked,
+.modal-radio:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.modal-radio:checked + label,
+.modal-radio:not(:checked) + label
+{
+    position: relative;
+    padding-left: 2.5rem;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.modal-radio:checked + label:before,
+.modal-radio:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000139;
+    border-radius: 100%;
+    background: #fff;
+}
+.modal-radio:checked + label:after,
+.modal-radio:not(:checked) + label:after {
+    content: '';
+    width: 44px;
+    height: 42px;
+    position: absolute;
+    background: white url("../img/svg/Radiobutton.svg");
+    top: -11px;
+    left: -4px;
+    background-size: contain;
+}
+.modal-radio:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.modal-radio:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/*CHECKBOX*/
+.container-box,
+.container-box2{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 30%;
+}
+
+/* Hide the browser's default checkbox */
+.container-box input,
+.container-box2 input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.container-box .checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ffffff;
+    border: 2px solid #000139;
+    border-radius: 100px;
+}
+
+/* On mouse-over, add a grey background color */
+.container-box:hover input ~ .checkmark {
+    background-color: #ffffff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-box input:checked ~ .checkmark {
+    background-color: #ffffff;
+    border: 2px solid #3498DB;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.container-box .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-box input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-box .checkmark:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #3498DB;
+    border-radius: 100%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+
+
+/*/////////////////*/
+
+.container-box2{
+    max-width: 100%;
+}
+/* Create a custom checkbox */
+.container-box2 .checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ffffff;
+    border: 2px solid #12CBC4;
+    border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.container-box2:hover input ~ .checkmark {
+    background-color: #ffffff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-box2 input:checked ~ .checkmark {
+    background-color: #ffffff;
+    border: 2px solid #12CBC4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.container-box2 .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-box2 input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-box2 .checkmark:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url("../img/svg/ok.svg") no-repeat;
+    border-radius: 100%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+/*TEXTAREA*/
+textarea{
+    max-height: 96px;
+    width: 100%;
+    background: rgba(0, 168, 255, 0.08);
+    border: 1px solid rgba(0, 1, 57, 0.3);
+    border-radius: 12px;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000139;
+
+}
+textarea:focus{
+    border: 1px solid #000139;
+    outline: none;
+}
+textarea::placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #737373;
+}
+.agreement-link{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #000139;
+    transition: .6s;
+
+}
+.agreement-link:hover{
+    color: #23238f;
+}
+.form-submit{
+    width: 100%;
+    height: 48px;
+    background: #3498DB;
+    border-radius: 64px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+}
+.back{
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    border: 2px solid #3498DB;
+    border-radius: 64px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3498DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+}
+#close-form{
+    max-width: fit-content;
+    position: absolute;
+    right: 0;
+    top: -3rem;
+}
+.banners{
+    height: 400px;
+    background-size: cover !important;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+}
+.banners-bg-1{
+    background:no-repeat url("/img/bg1.png");
+}
+.banners-bg-2{
+    background:no-repeat url("/img/bg2.png");
+}
+.banners-bg-3{
+    background:no-repeat url("/img/bg3.png");
+}
+.banners-bg-4{
+    background:no-repeat url("/img/bg4.png");
+}
+.news-banner{
+    height: 70vh;
+}
+.banners-bg-5{
+    background:no-repeat url("/img/bg5.png");
+}
+.banners-bg-6{
+    background:no-repeat url("/img/bg6.png");
+}
+.banners-bg-7{
+    background:no-repeat url("/img/bg7.png");
+}
+.banners-years{
+    color: #F6B718;
+}
+.banners-text{
+    color: #ffffff;
+}
+.serf a,
+.serf p{
+    max-width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+}
+.serf a{
+    color: #00A8FF;
+    border-bottom: 1px solid transparent;
+    transition: 0.6s;
+    margin-right: 1rem;
+}
+.serf a:hover{
+    color: #00A8FF;
+    border-bottom-color:  #00A8FF;
+}
+.serf p{
+    color: #737373;
+    border-bottom: 1px solid #737373;
+    padding-left: 0;
+    padding-right: 0;
+}
+.project-list{
+    padding-left: 0;
+}
+.project-list li {
+    list-style: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000139;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+.project-list li:after{
+    content: '🔶';
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000
+}
+h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000
+}
+.video-js {
+    width: 100%;
+    height: 400px;
+    border-radius: 18px;
+}
+.video-js .vjs-big-play-button {
+    top: 80%;
+    left: 10px;
+    border: none;
+    background-color: transparent;
+}
+.vjs-poster {
+    background-size: cover;
+    border-radius: 18px;
+    background-color: transparent;
+
+}
+.create-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.create-container h1{
+    margin-bottom: 4rem;
+}
+
+.create-form{
+    width: 100%;
+    height: 50vh;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+
+}
+.create-form label{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 17px;
+    margin-bottom: 12px;
+}
+.create-form input{
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 168, 255, 0.08);
+    border: 1px solid rgba(0, 1, 57, 0.3);
+    border-radius: 4px;
+    padding-left: 20px;
+    margin-bottom: 2rem;
+}
+.create-form textarea{
+    margin-bottom: 2rem;
+}
+.create-form input[type="file"]{
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+.create-form .btn-box{
+    margin-top: 2rem;
+}
+.create-form .form-submit{
+    height: 42px;
+}
+.footer-mob{
+    display: none;
+}
