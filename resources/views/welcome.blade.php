@@ -20,6 +20,7 @@
                                 <label for="sum">Вкажіть суму внеску, грн</label>
                                 <input id="sum" type="text" name="amount" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Сума">
                             </div>
+                            <p class="form-title">Або виберіть розміру внеску з варіантів нижче:</p>
                             <div class="row d-flex justify-content-between align-items-center mb-4">
                                 <div class="radio-box">
                                     <label for="rad1">
@@ -295,8 +296,7 @@
                             </div>
                             <div class="col-6">
                                 <p class="help-count">11</p>
-                                <p class="help-text">Населених
-                                    пунктів</p>
+                                <p class="help-text">Областей України</p>
                             </div>
                         </div>
                         <a href="https://easypay.ua/ua/partners/hromadska-orhanizatsiya-erlayt" class="donate">
@@ -427,7 +427,10 @@
 
 
 @section('page-script')
+
     <script>
+
+
         let mail_form = $('#mail-form')
         console.log(mail_form.serialize())
 

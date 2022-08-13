@@ -423,6 +423,11 @@ select[name="lang-switch"]{
     background: url("../img/bgsec1.png") no-repeat;
     background-size: cover;
 }
+.bg-sec .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .bg-sec .section-title{
     color: white;
 }
@@ -510,6 +515,9 @@ select[name="lang-switch"]{
     top: 10%;
     display: block;
     position: absolute;
+}
+.achievements .section-title{
+    max-width: 50%;
 }
 
 .share-btn > a:hover {
@@ -1182,5 +1190,9 @@ h4 {
     height: 42px;
 }
 .footer-mob{
+    display: none;
+}
+.carousel-control-prev,
+.carousel-control-next{
     display: none;
 }

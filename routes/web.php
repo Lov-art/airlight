@@ -22,3 +22,9 @@ Route::get('/projects', function () {
 Route::get('/create', function () {
     return view('create-news');
 });
+
+Route::prefix('news')-> group(function(){
+    Route::get('/',[\App\Http\Controllers\NewsController::class,'index']);
+    Route::get('get',[\App\Http\Controllers\NewsController::class,'get']);
+    Route::post('put',[\App\Http\Controllers\NewsController::class,'put']);
+});
