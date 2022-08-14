@@ -471,6 +471,7 @@ select[name="lang-switch"]{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: space-between;
 }
 .news-card{
     background: #FFFFFF;
@@ -478,7 +479,7 @@ select[name="lang-switch"]{
     border-radius: 16px;
     min-height: 448px;
     padding: 0;
-    max-width: 30%;
+    width: 30%;
     margin-bottom: 30px;
 }
 .news-card img{
@@ -1194,5 +1195,22 @@ h4 {
 }
 .carousel-control-prev,
 .carousel-control-next{
+    display: none;
+}
+.toggle-content {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 150ms ease-in-out;
+}
+
+.toggle-content.is-visible {
+    display: block;
+    height: auto;
+    padding: 15px;
+    margin-top: 15px;
+    border: 10px solid white;
+}
+.hide{
     display: none;
 }

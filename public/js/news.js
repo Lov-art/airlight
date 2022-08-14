@@ -1,8 +1,5 @@
- let shareModal = document.getElementById('shareNewsModal');
+let shareModal = document.getElementById('shareNewsModal');
 
-
- let news ={}
- console.log(news)
 class NewsCards {
 
     constructor() {
@@ -22,7 +19,6 @@ class NewsCards {
 class News extends NewsCards{
 
     constructor(options) {
-        console.log(options)
         super(options)
         this.cardBox =this.createCardBox()
         this.title = options.title,
@@ -62,46 +58,42 @@ class News extends NewsCards{
 }
 
 
- const REQUEST = 'https://ngo.air-light.com.ua/news/get'
+const REQUEST = 'https://ngo.air-light.com.ua/news/get'
 
-news = fetch(REQUEST)
+fetch(REQUEST)
      .then((response) => {
          return response.json();
      })
      .then((data) => {
-         data.forEach(obj=>{
-             console.log(obj);
-         })
-         console.log(data);
-     });
-
-
- const DATA = {
-     form_name:'api',
-     method:'news',
-     type:'get'
- }
-
- $.ajax({
-     type: 'post',
-     url: REQUEST,
-     data: DATA,
-     success: (resp)=>{
-         console.log(resp)
-         for (let index in resp){
-             let item = resp[index]
-
-
-             let card = new News(item)
+         data.forEach((obj,index) => {
+             let card = new News(obj)
              card.createCardContent()
-         }
 
-     },
-     dataType: 'json'
- })
+             let newsCard = document.querySelectorAll('.news-card')
+             if(index>2){
+                 newsCard[index].classList.add('hide')
+                 showHidden(newsCard[index],document.getElementById('news-collapse'))
+             }
+
+             if(document.documentElement.clientWidth <=600){
+                 let news = document.querySelectorAll('.news-card')
+                 newsCard[0].classList.add('active')
+
+                 newsCard.forEach(item =>{
+                     item.classList.add('carousel-item')
+                 })
+
+                 var newsCarousel = document.querySelector('#carouselNews')
+                 var carousel = new bootstrap.Carousel(newsCarousel,{
+                     wrap:true,
+                     touch:true
+                 })
+             }
+
+         })
 
 
-
+     });
 
 let shareBtn = document.querySelectorAll('.news-share');
 let socialBtns = document.getElementById('socialBox')
@@ -118,19 +110,15 @@ shareBtn.forEach(item =>{
     })
 })
 
-if(document.documentElement.clientWidth <=600){
-    let news = document.querySelectorAll('.news-card')
-    news[0].classList.add('active')
 
-    news.forEach(item =>{
-        item.classList.add('carousel-item')
+
+
+
+function showHidden(elem,btn){
+    btn.addEventListener('click',()=>{
+        elem.classList.toggle('hide')
     })
-
-    var newsCarousel = document.querySelector('#carouselNews')
-    var carousel = new bootstrap.Carousel(newsCarousel,{
-        wrap:true,
-        touch:true
-    })
-
-
 }
+
+
+

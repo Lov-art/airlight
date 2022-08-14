@@ -333,7 +333,7 @@
                 <p class="section-title">Наші новини</p>
 
                 <div id="carouselNews" class="carousel slide" data-bs-ride="carousel">
-                    <div class="news-box carousel-inner"> </div>
+                    <div class="news-box carousel-inner" data-type="news-box"></div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselNews" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
@@ -344,7 +344,9 @@
                     </button>
                 </div>
 
-                <button class="collapse-btn" id="news-collapse"> open</button>
+
+
+                <a href="javascript:void(0)" class="collapse-btn" id="news-collapse"> open</a>
 
 
 
@@ -427,9 +429,11 @@
 
 
 @section('page-script')
-
+    <script src={{asset('js/news.js')}}></script>zz
     <script>
 
+        let newsArr = document.querySelector('[data-type="news-box"]').children
+        console.log(newsArr.length)
 
         let mail_form = $('#mail-form')
         console.log(mail_form.serialize())
