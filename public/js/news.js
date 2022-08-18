@@ -36,7 +36,7 @@ class News extends NewsCards{
                     <p class="news-card-title">${this.title}</p>
                     <p class="news-card-date">${this.date}</p>
                     <div class="row justify-content-between align-items-center">
-                        <a href="/index.php?page=news&id=${this.id}" class="news-link">
+                        <a href="https://ngo.air-light.com.ua/news?id=${this.id}" class="news-link">
                             Читати більше
                             <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10 1L17 8L10 15M1 8H17H1Z" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

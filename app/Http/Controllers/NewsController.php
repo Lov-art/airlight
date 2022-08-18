@@ -18,6 +18,12 @@ class NewsController extends Controller
         return response()->json($news);
     }
     public function put (Request $request){
-
+        DB::table('news')->insert($request->post());
+        return response()->json($request->post());
     }
+//    $news=[]
+//    public function getOne ( $id){
+//        DB::table('news')->find($id);
+//        return response()->json($request->post());
+//    }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('locale/{locale}', function ($locale) {
+//    Session::put('locale', $locale);
+//
+//    return redirect()->back();
+//})->name('locale');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,8 +30,9 @@ Route::get('/create', function () {
     return view('create-news');
 });
 
-Route::prefix('news')-> group(function(){
+
+Route::prefix('news')->name('news.')-> group(function(){
     Route::get('/',[\App\Http\Controllers\NewsController::class,'index']);
-    Route::get('get',[\App\Http\Controllers\NewsController::class,'get']);
-    Route::post('put',[\App\Http\Controllers\NewsController::class,'put']);
+    Route::get('get',[\App\Http\Controllers\NewsController::class,'get'])->name('get');
+    Route::post('put',[\App\Http\Controllers\NewsController::class,'put'])->name('put');
 });

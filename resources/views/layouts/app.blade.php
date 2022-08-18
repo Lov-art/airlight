@@ -19,9 +19,12 @@
     @yield('page-assets')
 </head>
 
+    @yield('this-page-style')
+
 <body>
 @include('templates.header')
 @yield('content')
+@yield('news-block')
 @include('templates.footer')
 
 
