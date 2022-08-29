@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>@lang('main:title')</h1>
+    {{--    <h1>@lang('app.main:title')</h1>--}}
     <main data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <section class="banner">
             <div class="container">
@@ -444,7 +444,8 @@
 
 
 @section('page-script')
-    <script src={{asset('js/news.js')}}></script>
+    @include('templates.news-script')
+{{--    <script src={{asset('js/news.js')}}></script>--}}
     <script>
 
         let newsArr = document.querySelector('[data-type="news-box"]').children
@@ -458,6 +459,9 @@
                 type: mail_form.attr('method'),
                 url: mail_form.attr('action'),
                 data: mail_form.serialize(),
+                headers: {
+                    'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+                },
                 success: (resp)=>{
                     console.log(resp)
                 },

@@ -76,7 +76,7 @@
 
             </div>
         </div>
-        <form class="col-md-8" id="mail-form" action="php/forms.php" method="post">
+        <form class="col-md-8" id="mail-form" action="{{route('mail',['lang' => app()->getLocale()])}}" method="post">
             <input type="hidden" name="form_name" value="send_mail" >
             <p class="questionnaire-form-title">Пожалуйста, заполните этот документ и мы свяжемся с вами,
                 как только узнаем, как можем использовать вашу помощь.</p>

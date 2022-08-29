@@ -12,6 +12,7 @@
 
 
 @section('content')
+    <h1>@lang('app.main:title')</h1>
     <img src="" alt="" class="this-news-banner">
     <div class="container">
         <div class="content-box" id="contentBox"></div>

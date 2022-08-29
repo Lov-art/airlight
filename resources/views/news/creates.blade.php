@@ -61,8 +61,15 @@
         form = document.getElementById('create-form'),
         submitBtn = document.getElementById('submit');
 
-    const URL = '{{route('news.put')}}'
+
+    const URL = '{{route('news.put',['lang' => app()->getLocale() ])}}'
     let data = {};
+
+
+    // formData.append('img',img.files[0])
+    // formData.append('title',title.value)
+    // formData.append('content',content.getData())
+
 
 
 
@@ -70,10 +77,10 @@
     form.onsubmit = async (e) => {
         e.preventDefault();
 
-        data.content = content.getData()
-        data.title = title.value
-        data.img = 'img.value'
-
+        // data.content = content.getData()
+        // data.title = title.value
+        // data.img = 'img.value'
+        let formData = new FormData(form);
 
         $.ajax({
             type: "POST",
@@ -81,7 +88,9 @@
                 'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
             },
             url: URL,
-            data: data,
+            data: formData,
+            processData: false,  // Сообщить jQuery не передавать эти данные
+            contentType: false,
             success: success =>{
                 console.log(success)
             },

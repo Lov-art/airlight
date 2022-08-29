@@ -66,9 +66,9 @@
                             <a href="#about-us" class="nav-link scroll-link">Про нас</a>
                             <a href="#what-we-do" class="nav-link scroll-link">Що ми робимо</a>
                             <a href="/index.php?page=third" class="nav-link">Взяти участь</a>
-                            <a href="#news" class="nav-link scroll-link">Новини</a>
+                            <a href="#news" class="nav-link scrowell-link">Новини</a>
                             <a href="javascript:void(0)" class="nav-link" id="headerOpenForm">Стати волонтером </a>
-                            <a href="/index.php?page=projects" class="nav-link">Проекти Ерлайт</a>
+                            <a href="{{ env('APP_URL') }}{{app()->getLocale()}}/projects" class="nav-link">Проекти Ерлайт</a>
                         </div>
                         <div class="menu-line"></div>
                         <div class="d-flex justify-content-between">

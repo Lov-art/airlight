@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImageUploadController;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
 
@@ -19,20 +20,26 @@ use Illuminate\Support\Facades\Route;
 //
 //    return redirect()->back();
 //})->name('locale');
-
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/projects', function () {
-    return view('projects');
-});
-Route::get('/create', function () {
-    return view('create-news');
+Route::get('/',function (){
+    return redirect()->route('index',['lang' => 'uk']);
 });
 
+Route::prefix('{lang}') -> group(function () {
+    Route::get('/', [\App\Http\Controllers\indexController::class,'index'])->name('index');
+    Route::post('mail', [\App\Http\Controllers\MailController::class,'index'])->name('mail');
+    Route::get('/projects', function () {
+        return view('projects');
+    });
 
-Route::prefix('news')->name('news.')-> group(function(){
-    Route::get('/',[\App\Http\Controllers\NewsController::class,'index']);
-    Route::get('get',[\App\Http\Controllers\NewsController::class,'get'])->name('get');
-    Route::post('put',[\App\Http\Controllers\NewsController::class,'put'])->name('put');
+
+
+    Route::prefix('news')->name('news.')-> group(function(){
+        Route::get('/',[\App\Http\Controllers\NewsController::class,'index']);
+        Route::get('get',[\App\Http\Controllers\NewsController::class,'get'])->name('get');
+        Route::get('create',[\App\Http\Controllers\NewsController::class,'create'])->name('create');
+        Route::post('put',[\App\Http\Controllers\NewsController::class,'put'])->name('put');
+
+    });
 });
+
+

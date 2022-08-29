@@ -58,7 +58,7 @@ class News extends NewsCards{
 }
 
 
-const REQUEST = 'https://ngo.air-light.com.ua/news/get'
+const REQUEST = 'https://ngo.air-light.com.ua/uk/news/get'
 
 fetch(REQUEST)
      .then((response) => {
