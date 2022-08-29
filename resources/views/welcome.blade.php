@@ -443,9 +443,13 @@
 @stop
 
 
+
 @section('page-script')
-    @include('templates.news-script')
+
 {{--    <script src={{asset('js/news.js')}}></script>--}}
+@include('templates.news-script')
+
+
     <script>
 
         let newsArr = document.querySelector('[data-type="news-box"]').children

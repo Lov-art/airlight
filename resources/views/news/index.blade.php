@@ -12,9 +12,10 @@
 
 
 @section('content')
-    <h1>@lang('app.main:title')</h1>
-    <img src="" alt="" class="this-news-banner">
+
+    <img src="" alt="" class="this-news-banner" id="this-news-banner">
     <div class="container">
+        <h1 id="news-title"></h1>
         <div class="content-box" id="contentBox"></div>
     </div>
 
@@ -53,11 +54,14 @@
 
 
 @section('page-script')
-    <script src={{asset('js/news.js')}}></script>
+
+    @include('templates.news-script')
     <script>
         let PageLocation = (new URL(document.location)).searchParams;
         let getParam = PageLocation.get("id");
-        let contentBox = document.getElementById('contentBox')
+        let contentBox = document.getElementById('contentBox');
+        let bannerImg = document.getElementById('this-news-banner');
+        let newsTitle = document.getElementById('news-title');
 
         let thisNews = {}
         fetch(REQUEST)
@@ -68,6 +72,11 @@
                 if (Boolean(getParam))data.forEach(obj => obj.id === +getParam ? thisNews=obj:null)
                 else thisNews=data[0]
             })
-            .then(()=> contentBox.innerHTML=thisNews.content)
+            .then(()=> {
+                contentBox.innerHTML=thisNews.content
+                bannerImg.setAttribute('src','{{asset('img/news')}}/'+thisNews.img)
+                newsTitle.innerHTML=thisNews.title;
+
+                })
     </script>
 @endsection

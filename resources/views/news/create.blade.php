@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="container create-container">
+<div class="container create-container position-relative">
     <h1 class="text-center create-title">Додати новину </h1>
     <form class="create-form" id="create-form" enctype="multipart/form-data">
         @csrf
@@ -35,11 +35,13 @@
         <textarea id="content" name="content" cols="30" rows="10"></textarea>
 
         <div class="btn-box">
-            <input class="form-submit" id="submit"  type="submit">ОПУБЛИКОВАТЬ</a>
+            <input class="form-submit" id="submit"  type="submit" placeholder="ОПУБЛИКОВАТЬ">
         </div>
     </form>
 
-
+    <div class="modal-box d-none" id="modal-box">
+        <a href="{{ env('APP_URL') }}{{app()->getLocale()}}#news">Новина додана успішно</a>
+    </div>
 </div>
 
 
@@ -60,6 +62,7 @@
         img = document.getElementById('img'),
         form = document.getElementById('create-form'),
         submitBtn = document.getElementById('submit');
+        successModal = document.getElementById('modal-box');
 
 
     const URL = '{{route('news.put',['lang' => app()->getLocale() ])}}'
@@ -93,6 +96,7 @@
             contentType: false,
             success: success =>{
                 console.log(success)
+                successModal.classList.remove('d-none')
             },
             dataType: 'json'
         });
