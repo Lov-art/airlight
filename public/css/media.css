@@ -67,6 +67,9 @@
 }
 
 @media screen and (max-width: 600px){
+    .questionnaire-box {
+        z-index: 99;
+    }
     .banner{
         position: relative;
         margin-bottom: 280px;
@@ -230,6 +233,7 @@
     .lang-mob {
         font-size: 10px;
     }
+
 }
 @media screen and (max-height: 616px){
     .banner {

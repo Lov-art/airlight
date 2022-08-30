@@ -12,7 +12,8 @@
 
 
 @section('content')
-
+    <form id="donate-form" class="d-none" action="take"></form>
+    <a href="d-none" id="openFormModal"></a>
     <img src="" alt="" class="this-news-banner" id="this-news-banner">
     <div class="container">
         <h1 id="news-title"></h1>
@@ -57,6 +58,7 @@
 
     @include('templates.news-script')
     <script>
+
         let PageLocation = (new URL(document.location)).searchParams;
         let getParam = PageLocation.get("id");
         let contentBox = document.getElementById('contentBox');

@@ -15,11 +15,11 @@
                             </svg>
                             +38 (095) 548 83 25)</a>
                         <div class="social-network">
-                            <a href="" class="social facebook"></a>
-                            <a href="" class="social linkedin"></a>
-                            <a href="" class="social youtube"></a>
-                            <a href="" class="social instagram"></a>
-                            <a href="" class="social telegram"></a>
+                            <a href="https://www.facebook.com/ngo.airlight/" class="social facebook"></a>
+                            <a href="https://www.linkedin.com/company/ngo-air-light/" class="social linkedin"></a>
+                            <a href="https://youtube.com/playlist?list=PL5SelpMCSWyzufPZVsJcnF4LjJAmWq1A7" class="social youtube"></a>
+                            <a href="https://www.instagram.com/ngo.airlight/" class="social instagram"></a>
+                            <a href="https://t.me/+1ugIXWEagGhiOWVi" class="social telegram"></a>
                         </div>
                     </div>
                 </div>
@@ -29,10 +29,10 @@
                         <nav id="navbar-example2">
                             <a href="#about-us" class="nav-link scroll-link">Про нас</a>
                             <a href="#what-we-do" class="nav-link scroll-link">Що ми робимо</a>
-                            <a href="/index.php?page=third" class="nav-link">Взяти участь</a>
+{{--                            <a href="/index.php?page=third" class="nav-link">Взяти участь</a>--}}
                             <a href="#news" class="nav-link scroll-link">Новини</a>
-                            <a href="javascript:void(0)" class="nav-link" id="headerOpenForm">Стати волонтером </a>
-                            <a href="/index.php?page=projects" class="nav-link">Проекти Ерлайт</a>
+                            <a href="javascript:void(0)" class="nav-link headerOpenForm" >Стати волонтером </a>
+                            <a href="{{ env('APP_URL') }}{{app()->getLocale()}}/projects" class="nav-link">Проекти Ерлайт</a>
                         </nav>
                         <div class="header_btn_block">
                             <a href="https://easypay.ua/ua/partners/hromadska-orhanizatsiya-erlayt" class="donate">
@@ -65,9 +65,9 @@
                         <div class="link-box-mob d-flex flex-column justify-content-between align-items-start">
                             <a href="#about-us" class="nav-link scroll-link">Про нас</a>
                             <a href="#what-we-do" class="nav-link scroll-link">Що ми робимо</a>
-                            <a href="/index.php?page=third" class="nav-link">Взяти участь</a>
+{{--                            <a href="/index.php?page=third" class="nav-link">Взяти участь</a>--}}
                             <a href="#news" class="nav-link scrowell-link">Новини</a>
-                            <a href="javascript:void(0)" class="nav-link" id="headerOpenForm">Стати волонтером </a>
+                            <a href="javascript:void(0)" class="nav-link headerOpenForm" >Стати волонтером </a>
                             <a href="{{ env('APP_URL') }}{{app()->getLocale()}}/projects" class="nav-link">Проекти Ерлайт</a>
                         </div>
                         <div class="menu-line"></div>
@@ -98,11 +98,11 @@
                                     <p class="contact">м.Киев, вул.Антоновича 72</p>
                                 </div>
                                 <div class="social-network">
-                                    <a href="" class="social facebook"></a>
-                                    <a href="" class="social linkedin"></a>
-                                    <a href="" class="social youtube"></a>
-                                    <a href="" class="social instagram"></a>
-                                    <a href="" class="social telegram"></a>
+                                    <a href="https://www.facebook.com/ngo.airlight/" class="social facebook"></a>
+                                    <a href="https://www.linkedin.com/company/ngo-air-light/" class="social linkedin"></a>
+                                    <a href="https://youtube.com/playlist?list=PL5SelpMCSWyzufPZVsJcnF4LjJAmWq1A7" class="social youtube"></a>
+                                    <a href="https://www.instagram.com/ngo.airlight/" class="social instagram"></a>
+                                    <a href="https://t.me/+1ugIXWEagGhiOWVi" class="social telegram"></a>
                                 </div>
                             </div>
                         </div>

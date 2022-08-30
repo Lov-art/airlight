@@ -69,7 +69,8 @@
                 card.createCardContent()
 
                 let newsCard = document.querySelectorAll('.news-card')
-                if(index<2)showBtn.classList.add('d-none')
+                console.log(data.length)
+                if(data.length<2)showBtn.classList.add('d-none')
                 if(index>2){
                     newsCard[index].classList.add('hide')
                     showHidden(newsCard[index],showBtn)

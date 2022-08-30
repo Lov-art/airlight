@@ -2,26 +2,26 @@
     <div class="container">
         <div class="row footer-desc mb-5 justify-content-between">
             <div class="col-6 col-md-3 d-flex flex-column justify-content-between">
-                <img class="footer-img" src="img/AIRLIGHT.png"  alt="">
+                <img class="footer-img" src="{{asset('img/AIRLIGHT.png')}}"  alt="">
                 <p class="footer-text mt-4 mb-4">Захист прав і свобод громадян України,
                     постраждалих в результаті воєнних дій
                     на території України.</p>
                 <div class="social-network">
-                    <a href="" class="social facebook"></a>
-                    <a href="" class="social linkedin"></a>
-                    <a href="" class="social youtube"></a>
-                    <a href="" class="social instagram"></a>
-                    <a href="" class="social telegram"></a>
+                    <a href="https://www.facebook.com/ngo.airlight/" class="social facebook"></a>
+                    <a href="https://www.linkedin.com/company/ngo-air-light/" class="social linkedin"></a>
+                    <a href="https://youtube.com/playlist?list=PL5SelpMCSWyzufPZVsJcnF4LjJAmWq1A7" class="social youtube"></a>
+                    <a href="https://www.instagram.com/ngo.airlight/" class="social instagram"></a>
+                    <a href="https://t.me/+1ugIXWEagGhiOWVi" class="social telegram"></a>
                 </div>
 
             </div>
             <div class="col-6 col-md-3  d-flex flex-column justify-content-between">
-                <a href="#" class="nav-link">Про нас</a>
-                <a href="#" class="nav-link">Що ми робимо</a>
-                <a href="#" class="nav-link">Взяти участь</a>
-                <a href="#" class="nav-link">Новини</a>
-                <a href="#" class="nav-link">Стати волонтером </a>
-                <a href="#" class="nav-link">Проекти Ерлайт</a>
+                <a href="#about-us" class="nav-link">Про нас</a>
+                <a href="#what-we-do" class="nav-link">Що ми робимо</a>
+{{--                <a href="#" class="nav-link">Взяти участь</a>--}}
+                <a href="#news" class="nav-link">Новини</a>
+                <a href="javascript:void(0)" class="nav-link headerOpenForm" >Стати волонтером </a>
+                <a href="{{ env('APP_URL') }}{{app()->getLocale()}}/projects" class="nav-link">Проекти Ерлайт</a>
             </div>
             <div class="col-12 col-md-3  d-flex flex-column justify-content-between">
                 <div class="contact-box">
@@ -33,7 +33,7 @@
                             </svg>
                         </button>
                     </p>
-                    <a href="tel:+380990303064" class="contact">+38099-030-30-64</a>
+                    <a href="tel:+380990303064" class="contact">+380990303064</a>
                 </div>
                 <div class="contact-box">
                     <p class="contact-title">
@@ -56,16 +56,16 @@
         <div class="footer-mob">
             <div class="row">
                 <div class="col-6 col-md-3 d-flex flex-column justify-content-between">
-                    <img class="footer-img" src="img/AIRLIGHT.png"  alt="">
+                    <img class="footer-img" src="{{asset('img/AIRLIGHT.png')}}"  alt="">
                     <p class="footer-text mt-4 mb-4">Захист прав і свобод громадян України,
                         постраждалих в результаті воєнних дій
                         на території України.</p>
                     <div class="social-network">
-                        <a href="" class="social facebook"></a>
-                        <a href="" class="social linkedin"></a>
-                        <a href="" class="social youtube"></a>
-                        <a href="" class="social instagram"></a>
-                        <a href="" class="social telegram"></a>
+                        <a href="https://www.facebook.com/ngo.airlight/" class="social facebook"></a>
+                        <a href="https://www.linkedin.com/company/ngo-air-light/" class="social linkedin"></a>
+                        <a href="https://youtube.com/playlist?list=PL5SelpMCSWyzufPZVsJcnF4LjJAmWq1A7" class="social youtube"></a>
+                        <a href="https://www.instagram.com/ngo.airlight/" class="social instagram"></a>
+                        <a href="https://t.me/+1ugIXWEagGhiOWVi" class="social telegram"></a>
                     </div>
 
                 </div>
@@ -79,7 +79,7 @@
                                 </svg>
                             </button>
                         </p>
-                        <a href="tel:+380990303064" class="contact">+38099-030-30-64</a>
+                        <a href="tel:+380990303064" class="contact">+380990303064</a>
                     </div>
                     <div class="contact-box">
                         <p class="contact-title">
@@ -103,10 +103,10 @@
             <div class="footer-links d-flex flex-wrap">
                 <a href="#about-us" class="nav-link scroll-link">Про нас</a>
                 <a href="#what-we-do" class="nav-link scroll-link">Що ми робимо</a>
-                <a href="/index.php?page=third" class="nav-link">Взяти участь</a>
+{{--                <a href="/index.php?page=third" class="nav-link">Взяти участь</a>--}}
                 <a href="#news" class="nav-link scroll-link">Новини</a>
-                <a href="#" class="nav-link">Стати волонтером </a>
-                <a href="/index.php?page=projects" class="nav-link">Проекти Ерлайт</a>
+                <a href="javascript:void(0)" class="nav-link headerOpenForm" >Стати волонтером </a>
+                <a href="{{ env('APP_URL') }}{{app()->getLocale()}}/projects" class="nav-link">Проекти Ерлайт</a>
             </div>
             <div class="menu-line"></div>
         </div>

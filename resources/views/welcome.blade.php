@@ -87,10 +87,10 @@
                     preload="auto"
                     width="100%"
                     height="400px"
-                    poster="/img/poster.png"
+                    poster="{{asset('/img/poster.png')}}"
                     data-setup="{}"
                 >
-                    <source src="/video/oon.mp4" type="video/mp4" />
+                    <source src="{{asset('/video/oon.mp4')}}" type="video/mp4" />
 
                     <p class="vjs-no-js">
                         To view this video please enable JavaScript, and consider upgrading to a
@@ -112,7 +112,7 @@
                         <div class="flipcard h blue">
                             <div class="front d-flex flex-column justify-content-between align-items-center ">
                                 <p class="card-text">Гуманітарна допомога </p>
-                                <img src="img/svg/card1.svg" alt="" class="card-img">
+                                <img src="{{asset('img/svg/card1.svg')}}" alt="" class="card-img">
                             </div>
                             <div class="back d-flex align-items-center">
                                 <p class="card-text text-center">Надання індивідуальної гуманітарної підтримки найбільш уразливим громадянським жертвам воєнних дій, таким як діти та особи з інвалідністю, громадяни всіх статево-вікових груп, які отримали травми внаслідок воєнного конфлікту
@@ -122,7 +122,7 @@
                         <div class="flipcard h green">
                             <div class="front d-flex flex-column justify-content-between align-items-center ">
                                 <p class="card-text">Правова підтримка </p>
-                                <img src="img/svg/card2.svg" alt="" class="card-img">
+                                <img src="{{asset('img/svg/card2.svg')}}" alt="" class="card-img">
                             </div>
                             <div class="back d-flex align-items-center">
                                 <p class="card-text text-center"> Правова та консультативна допомога надається з питань про порядок, умови та критерії призначення інвалідності для постраждалих цивільних осіб, надаються рекомендації щодо звернення до правоохоронних органів, лікувальних закладів, підрозділів пенсійного збору документів для реалізації своїх прав на одержання відповідного статусу.</p>
@@ -131,7 +131,7 @@
                         <div class="flipcard h yellow">
                             <div class="front d-flex flex-column justify-content-between align-items-center ">
                                 <p class="card-text">Соціальна підтримка </p>
-                                <img src="img/svg/card3.svg" alt="" class="card-img">
+                                <img src="{{asset('img/svg/card3.svg')}}" alt="" class="card-img">
                             </div>
                             <div class="back d-flex align-items-center">
                                 <p class="card-text text-center">Організаційний супровід поранених громадян при оформленні спеціального статусу осіб з інвалідністю внаслідок війни, допомога в оформленні статусу внутрішньо переміщеної особи, надання сертифікатів продовольчої та гігієнічної підтримки, а також інші форми соціальної консультаційної підтримки на місцях.</p>
@@ -143,7 +143,7 @@
                         <div class="flipcard h yellow">
                             <div class="front d-flex flex-column justify-content-between align-items-center ">
                                 <p class="card-text">Реабілітація від отриманих поранень  </p>
-                                <img src="img/svg/card1.svg" alt="" class="card-img">
+                                <img src="{{asset('img/svg/card1.svg')}}" alt="" class="card-img">
                             </div>
                             <div class="back d-flex align-items-center">
                                 <p class="card-text text-center"> <span class="bold">ГО Ерлайт</span> реалізує
@@ -157,7 +157,7 @@
                             <div class="front d-flex flex-column justify-content-between align-items-center ">
                                 <p class="card-text">Пряма допомога
                                     дітям  </p>
-                                <img src="img/svg/card2.svg" alt="" class="card-img">
+                                <img src="{{asset('img/svg/card2.svg')}}" alt="" class="card-img">
                             </div>
                             <div class="back d-flex align-items-center">
                                 <p class="card-text text-center"><span class="bold">ГО Ерлайт</span> визначено надавати пріоритетну допомогу дітям що зазнали шкоди внаслідок воєнних дій, та потребують невідкладної допомоги у наданні продовольчої, гуманітарної, медичної допомоги
@@ -167,7 +167,7 @@
                         <div class="flipcard h green">
                             <div class="front d-flex flex-column justify-content-between align-items-center ">
                                 <p class="card-text">Адвокаційний супровід </p>
-                                <img src="img/svg/card3.svg" alt="" class="card-img">
+                                <img src="{{asset('img/svg/card3.svg')}}" alt="" class="card-img">
                             </div>
                             <div class="back d-flex align-items-center">
                                 <p class="card-text text-center">Підготовка матеріалів при зверненні до судових інстанцій з позовами щодо відшкодування моральної та матеріальної шкоди.</p>
@@ -289,7 +289,7 @@
                                 <p class="help-text">Міст України</p>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mb-5">
                             <div class="col-6">
                                 <p class="help-count">32</p>
                                 <p class="help-text">ОТГ вздовж лінії
@@ -308,7 +308,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <img src="img/image%2015.png" alt="" class="help-img">
+                        <img src="{{asset('img/image%2015.png')}}" alt="" class="help-img">
                     </div>
                 </div>
             </div>
@@ -318,14 +318,14 @@
                 <p class="section-title text-center">Глобальні цілі сталого розвитку,
                     які ми підтримуємо через нашу ініціативу</p>
                 <div class="row points-row flex-wrap mb-5">
-                    <img src="img/image1.png" alt="">
-                    <img src="img/image2.png" alt="">
-                    <img src="img/image3.png" alt="">
-                    <img src="img/image4.png" alt="">
-                    <img src="img/image5.png" alt="">
-                    <img src="img/image6.png" alt="">
-                    <img src="img/image7.png" alt="">
-                    <img src="img/image8.png" alt="">
+                    <img src="{{asset('img/image1.png')}} " alt="">
+                    <img src="{{asset('img/image2.png')}}" alt="">
+                    <img src="{{asset('img/image3.png')}}" alt="">
+                    <img src="{{asset('img/image4.png')}}" alt="">
+                    <img src="{{asset('img/image5.png')}}" alt="">
+                    <img src="{{asset('img/image6.png')}}" alt="">
+                    <img src="{{asset('img/image7.png')}}" alt="">
+                    <img src="{{asset('img/image8.png')}}" alt="">
                 </div>
             </div>
         </section>
@@ -378,25 +378,25 @@
                         <p class="section-title">Партнери </p>
                     </div>
                     <div class="col-md-8">
-                        <div class="row justify-content-between flex-wrap gap-3 mb-3">
+                        <div class="row justify-content-between align-items-center flex-wrap gap-3 mb-3">
                             <a href="" class="partners-link">
-                                <img src="img/part1.png" alt="">
+                                <img src="{{asset('img/part1.png')}} " alt="">
                             </a>
                             <a href="" class="partners-link">
-                                <img src="img/part2.png" alt="">
+                                <img src="{{asset('img/part2.png')}}" alt="">
                             </a>
                             <a href="" class="partners-link">
-                                <img src="img/part3.png" alt="">
+                                <img src="{{asset('img/part3.png')}}" alt="">
                             </a>
 
                             <a href="" class="partners-link">
-                                <img src="img/part4.png" alt="">
+                                <img src="{{asset('img/part4.png')}}" alt="">
                             </a>
                             <a href="" class="partners-link">
-                                <img src="img/part5.png" alt="">
+                                <img src="{{asset('img/part5.png')}}" alt="">
                             </a>
                             <a href="" class="partners-link">
-                                <img src="img/part6.png" alt="">
+                                <img src="{{asset('img/part6.png')}}" alt="">
                             </a>
                         </div>
 
@@ -408,18 +408,18 @@
                         <p class="section-title">Кластери</p>
                     </div>
                     <div class="col-md-8">
-                        <div class="row justify-content-between flex-wrap gap-3 mb-3">
+                        <div class="row justify-content-between align-items-center flex-wrap gap-3 mb-3">
                             <a href="" class="partners-link">
-                                <img src="img/class1.png" alt="">
+                                <img src="{{asset('img/class1.png')}}" alt="">
                             </a>
                             <a href="" class="partners-link">
-                                <img src="img/class2.png" alt="">
+                                <img src="{{asset('img/class2.png')}}" alt="">
                             </a>
                             <a href="" class="partners-link">
-                                <img src="img/class3.png" alt="">
+                                <img src="{{asset('img/class3.png')}}" alt="">
                             </a>
                             <a href="" class="partners-link">
-                                <img src="img/class4.png" alt="">
+                                <img src="{{asset('img/class4.png')}}" alt="">
                             </a>
 
                         </div>

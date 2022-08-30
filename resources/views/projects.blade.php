@@ -145,6 +145,8 @@
     </div>
 
 </main>
+<form id="donate-form" class="d-none" action="take"></form>
+<a href="d-none" id="openFormModal"></a>
 @stop
 
 @section('page-script')
@@ -158,7 +160,6 @@
         })
 
         let mail_form = $('#mail-form')
-        console.log(mail_form.serialize())
 
         $('.form-submit').on('click', ()=>{
             $.ajax({
