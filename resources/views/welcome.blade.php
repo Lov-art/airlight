@@ -10,7 +10,7 @@
                         <p class="banner-title">Підтримайте людей,
                             які постраждали та
                             змушені покинути
-                            свої домівки.</p>
+                            свої домівки</p>
                     </div>
                     <div class="col-lg-5">
                         <form method="get" action="https://easypay.ua/ua/partners/hromadska-orhanizatsiya-erlayt" class="donate-form" id="donate-form">
@@ -282,7 +282,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <p class="help-count">47</p>
-                                <p class="help-text">Населкних пунктів</p>
+                                <p class="help-text">Населених пунктів</p>
                             </div>
                             <div class="col-6">
                                 <p class="help-count">22</p>
@@ -452,25 +452,9 @@
 
     <script>
 
-        let newsArr = document.querySelector('[data-type="news-box"]').children
-        console.log(newsArr.length)
+        // let newsArr = document.querySelector('[data-type="news-box"]').children
+        // console.log(newsArr.length)
 
-        let mail_form = $('#mail-form')
-        console.log(mail_form.serialize())
 
-        $('.form-submit').on('click', ()=>{
-            $.ajax({
-                type: mail_form.attr('method'),
-                url: mail_form.attr('action'),
-                data: mail_form.serialize(),
-                headers: {
-                    'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
-                },
-                success: (resp)=>{
-                    console.log(resp)
-                },
-                dataType: 'json'
-            });
-        })
     </script>
 @stop

@@ -484,7 +484,7 @@ select[name="lang-switch"]{
 }
 .news-card img{
     width: 100%;
-    height: 150px;
+    height: 170px;
 }
 .card-body{
     padding: 30px;
@@ -497,6 +497,7 @@ select[name="lang-switch"]{
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
+    color: #000139;
 }
 .news-card-date{
     font-weight: 600;
@@ -1135,7 +1136,7 @@ h4 {
     background-color: transparent;
 }
 .vjs-poster {
-    background-size: cover;
+    background-size: contain;
     border-radius: 18px;
     background-color: transparent;
 

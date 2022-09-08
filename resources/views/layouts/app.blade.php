@@ -76,8 +76,21 @@
 
             </div>
         </div>
+
         <form class="col-md-8" id="mail-form" action="{{route('mail',['lang' => app()->getLocale()])}}" method="post">
+
             <input type="hidden" name="form_name" value="send_mail" >
+
+            @if($errors->any())
+                <div class="alert alert-error">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <p class="questionnaire-form-title">Пожалуйста, заполните этот документ и мы свяжемся с вами,
                 как только узнаем, как можем использовать вашу помощь.</p>
             <div class="row mt-4 mb-md-4">
@@ -85,6 +98,9 @@
                     <div class="input-box">
                         <label for="fio">Ім'я та прізвище*</label>
                         <input type="text" id="fio" name="fio" placeholder="Вкажи своє і’мя та прізвище">
+                        @error('fio')
+                        <p>{{$errors->first('fio')}}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -105,7 +121,31 @@
                     <div class="input-box">
                         <label for="city">Вкажіть область**</label>
                         <select name="district" id="district">
-                            <option value="1">1</option>
+                            <option value="АР Крим">АР Крим</option>
+                            <option value="Вінницька">Вінницька</option>
+                            <option value="Волинська">Волинська</option>
+                            <option value="Дніпропетровська">Дніпропетровська</option>
+                            <option value="Донецька">Донецька</option>
+                            <option value="Житомирська">Житомирська</option>
+                            <option value="Закарпатська">Закарпатська</option>
+                            <option value="Запорізька">Запорізька</option>
+                            <option value="Івано-Франківська">Івано-Франківська</option>
+                            <option value="Київська">Київська</option>
+                            <option value="Кіровоградська">Кіровоградська</option>
+                            <option value="Луганська">Луганська</option>
+                            <option value="Львівська">Львівська</option>
+                            <option value="Миколаївська">Миколаївська</option>
+                            <option value="Одеська">Одеська</option>
+                            <option value="Полтавська">Полтавська</option>
+                            <option value="Рівненська">Рівненська</option>
+                            <option value="Сумська">Сумська</option>
+                            <option value="Тернопільська">Тернопільська</option>
+                            <option value="Харківська">Харківська</option>
+                            <option value="Херсонська">Херсонська</option>
+                            <option value="Хмельницька">Хмельницька</option>
+                            <option value="Черкаська">Черкаська</option>
+                            <option value="Чернівецька">Чернівецька</option>
+                            <option value="Чернігівська">Чернігівська</option>
                         </select>
                     </div>
                 </div>
@@ -117,7 +157,7 @@
                     <label for="tel">Тобі вже виповнилося 18 років?* * </label>
                     <div class="form-radio-box">
                         <p>
-                            <input class="modal-radio" type="radio" name="userAge[]" id="userAge1" value="yes" >
+                            <input class="modal-radio" type="radio" name="userAge[]" id="userAge1" value="yes" checked>
                             <label for="userAge1">Так</label>
                         </p>
                         <p>
@@ -133,9 +173,10 @@
                 <div class="input-box">
                     <label for="tel">Як ти можеш допомогти?*</label>
                     <div class="form-radio-box d-flex justify-content-between align-items-center flex-wrap gap-2">
+
                         <label class="container-box">
                             Я юрист
-                            <input class='' type="checkbox" name="canHelp[]" id="canHelp1" value="Я юрист">
+                            <input class='' type="checkbox" name="canHelp[]" id="canHelp1" value="Я юрист" checked>
                             <span class="checkmark"></span>
                         </label>
                         <label class="container-box">
@@ -174,7 +215,7 @@
                     <label for="tel">У тебе є машина?*</label>
                     <div class="form-radio-box">
                         <p>
-                            <input class="modal-radio" type="radio" name="haveCar[]" id="haveCar1" value="yes">
+                            <input class="modal-radio" type="radio" name="haveCar[]" id="haveCar1" value="yes" checked>
                             <label for="haveCar1">Так</label>
                         </p>
                         <p>
@@ -191,7 +232,7 @@
 
                         <label class="container-box">
                             Українська
-                            <input class='' type="checkbox" name="lang[]" id="lang1" value="Українська">
+                            <input class='' type="checkbox" name="lang[]" id="lang1" value="Українська" checked>
                             <span class="checkmark"></span>
                         </label>
                         <label class="container-box">
@@ -247,7 +288,7 @@
                         <a href="" class="agreement-link">
                             Погоджуюсь з політикою конфіденційності
                         </a>
-                        <input class='' type="checkbox" name="agreement" id="agreement">
+                        <input class='' type="checkbox" name="agreement" id="agreement" checked>
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -263,6 +304,9 @@
 
             </div>
 
+            <div class="row mt-3 container justify-content-between align-items-center alert-success" id="success-text"> </div>
+
+
         </form>
     </div>
 </div>
@@ -273,7 +317,42 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='{{asset('js/main.js')}}'></script>
 @show
+<script>
+    let mail_form = $('#mail-form')
+    let success_block = document.getElementById('success-text')
 
+    $('.form-submit').on('click', ()=>{
+        $.ajax({
+            type: mail_form.attr('method'),
+            url: mail_form.attr('action'),
+            data: mail_form.serialize(),
+            headers: {
+                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+            },
+            success: (resp)=>{},
+            dataType: 'json',
+            statusCode: {
+                422: function(resp) {
+                   let obj =JSON.parse(resp.responseText);
+                   let errors =obj.errors
+
+                   for (let err in errors){
+                       let inp = document.querySelectorAll(`[name = "${err}"]`);
+
+                       inp.forEach(i=>{
+                           i.style.borderColor='red'
+                           i.scrollIntoView({block: "center", behavior: "smooth"});
+                       })
+
+                   }
+                },
+                200:function (resp){
+                    success_block.innerHTML='SUCCESS!'
+                }
+            }
+        });
+    })
+</script>
 @yield('page-script')
 </body>
 </html>

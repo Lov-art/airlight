@@ -4,7 +4,7 @@
     <style>
         .this-news-banner{
             width: 100%;
-            height: 40vh;
+            height: 50vh;
             margin-bottom: 2rem;
         }
     </style>

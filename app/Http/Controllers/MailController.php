@@ -18,11 +18,18 @@ class MailController extends Controller
     {
         app() ->setLocale($lang);
 
+        $validation = $request->validate([
+            'fio' => 'required',
+            'email' => 'required',
+            'tel' => 'required',
+            'district' => 'required',
+        ]);
+
+
         $request=$request->post();
-//        var_dump($request);
 
         Mail::send('mail.index',$request,function (Message $message){
-                $message->to('lovin.a@vuso.ua','airlight-user')->subject('new user');
+                $message->to('ganzienko.o@vuso.ua','airlight-user')->subject('new user');
                 $message->from('site.user@air-light.com.ua','airlight site form');
             });
     }

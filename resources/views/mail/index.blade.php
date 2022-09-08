@@ -10,6 +10,7 @@
 <p>Вкажіть область**:{{$district}}</p>
 
 <p>Тобі вже виповнилося 18 років?:</p>
+
 @foreach($userAge as $l)
     <p>{{$l}}</p>
 @endforeach

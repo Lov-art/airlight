@@ -152,25 +152,12 @@
 @section('page-script')
     <script>
         let links = document.querySelectorAll('.scroll-link')
-        const MAIN_PAGE = 'http://ngo.air-light.com.ua/'
-
+        const MAIN_PAGE = '{{ env('APP_URL') }}{{app()->getLocale()}}'
+        console.log(MAIN_PAGE)
         links.forEach((link)=>{
             let attr = link.getAttribute('href')
             link.setAttribute('href', `${MAIN_PAGE}${attr}`)
         })
 
-        let mail_form = $('#mail-form')
-
-        $('.form-submit').on('click', ()=>{
-            $.ajax({
-                type: mail_form.attr('method'),
-                url: mail_form.attr('action'),
-                data: mail_form.serialize(),
-                success: (resp)=>{
-
-                },
-                dataType: 'json'
-            });
-        })
     </script>
 @stop

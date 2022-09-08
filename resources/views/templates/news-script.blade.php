@@ -35,7 +35,7 @@
             return `
                 <img src="{{asset('img/news')}}/${this.img}" alt="" class="news-card-img">
                 <div class="card-body">
-                    <p class="news-card-title">${this.title}</p>
+                     <a href="{{ env('APP_URL') }}{{app()->getLocale()}}/news?id=${this.id}" class="news-card-title">${this.title}</a>
                     <p class="news-card-date">${this.date}</p>
                     <div class="row justify-content-between align-items-center">
                         <a href="{{ env('APP_URL') }}{{app()->getLocale()}}/news?id=${this.id}" class="news-link">
@@ -64,13 +64,12 @@
         })
         .then((data) => {
             data.forEach((obj,index) => {
-                console.log(obj)
                 let card = new News(obj)
                 card.createCardContent()
 
                 let newsCard = document.querySelectorAll('.news-card')
-                console.log(data.length)
-                if(data.length<2)showBtn.classList.add('d-none')
+
+                if(data.length<=3)showBtn.classList.add('d-none')
                 if(index>2){
                     newsCard[index].classList.add('hide')
                     showHidden(newsCard[index],showBtn)
