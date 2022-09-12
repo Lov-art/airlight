@@ -29,7 +29,7 @@ class MailController extends Controller
         $request=$request->post();
 
         Mail::send('mail.index',$request,function (Message $message){
-                $message->to('ganzienko.o@vuso.ua','airlight-user')->subject('new user');
+                $message->to('lovin.a@vuso.ua','airlight-user')->subject('new user');
                 $message->from('site.user@air-light.com.ua','airlight site form');
             });
     }

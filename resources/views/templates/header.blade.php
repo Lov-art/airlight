@@ -15,11 +15,11 @@
                             </svg>
                             +38 (095) 548 83 25)</a>
                         <div class="social-network">
-                            <a href="https://www.facebook.com/ngo.airlight/" class="social facebook"></a>
-                            <a href="https://www.linkedin.com/company/ngo-air-light/" class="social linkedin"></a>
-                            <a href="https://youtube.com/playlist?list=PL5SelpMCSWyzufPZVsJcnF4LjJAmWq1A7" class="social youtube"></a>
-                            <a href="https://www.instagram.com/ngo.airlight/" class="social instagram"></a>
-                            <a href="https://t.me/+1ugIXWEagGhiOWVi" class="social telegram"></a>
+                            <a href="https://www.facebook.com/ngo.airlight/" class="social facebook" target="_blank"></a>
+                            <a href="https://www.linkedin.com/company/ngo-air-light/" class="social linkedin" target="_blank"></a>
+                            <a href="https://youtube.com/playlist?list=PL5SelpMCSWyzufPZVsJcnF4LjJAmWq1A7" class="social youtube" target="_blank"></a>
+                            <a href="https://www.instagram.com/ngo.airlight/" class="social instagram" target="_blank"></a>
+                            <a href="https://t.me/+1ugIXWEagGhiOWVi" class="social telegram" target="_blank"></a>
                         </div>
                     </div>
                 </div>
@@ -98,11 +98,11 @@
                                     <p class="contact">м.Киев, вул.Антоновича 72</p>
                                 </div>
                                 <div class="social-network">
-                                    <a href="https://www.facebook.com/ngo.airlight/" class="social facebook"></a>
-                                    <a href="https://www.linkedin.com/company/ngo-air-light/" class="social linkedin"></a>
-                                    <a href="https://youtube.com/playlist?list=PL5SelpMCSWyzufPZVsJcnF4LjJAmWq1A7" class="social youtube"></a>
-                                    <a href="https://www.instagram.com/ngo.airlight/" class="social instagram"></a>
-                                    <a href="https://t.me/+1ugIXWEagGhiOWVi" class="social telegram"></a>
+                                    <a href="https://www.facebook.com/ngo.airlight/" class="social facebook" target="_blank"></a>
+                                    <a href="https://www.linkedin.com/company/ngo-air-light/" class="social linkedin" target="_blank"></a>
+                                    <a href="https://youtube.com/playlist?list=PL5SelpMCSWyzufPZVsJcnF4LjJAmWq1A7" class="social youtube" target="_blank"></a>
+                                    <a href="https://www.instagram.com/ngo.airlight/" class="social instagram" target="_blank"></a>
+                                    <a href="https://t.me/+1ugIXWEagGhiOWVi" class="social telegram" target="_blank"></a>
                                 </div>
                             </div>
                         </div>

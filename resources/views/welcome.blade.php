@@ -80,26 +80,29 @@
                     <br><br>
                     Починаючи з 2017 р., ГО Ерлайт забезпечено стабільною підтримкою з боку Моніторингової місії ООН у форматі цільових проектів згідно тематики «Допомога громадянським жертвам збройного конфлікту на сході України в 2014-2019 рр.».
                 </p>
-                <video
-                    id="my-video"
-                    class="video-js"
-                    controls
-                    preload="auto"
-                    width="100%"
-                    height="400px"
-                    poster="{{asset('/img/poster.png')}}"
-                    data-setup="{}"
-                >
-                    <source src="{{asset('/video/oon.mp4')}}" type="video/mp4" />
+                <div class="video-box d-flex justify-content-center">
+                    <video
+                        id="my-video"
+                        class="video-js"
+                        controls
+                        preload="auto"
+                        width="80%"
+                        height="400px"
+                        poster="{{asset('/img/poster.png')}}"
+                        data-setup="{}"
+                    >
+                        <source src="{{asset('/video/oon.mp4')}}" type="video/mp4" />
 
-                    <p class="vjs-no-js">
-                        To view this video please enable JavaScript, and consider upgrading to a
-                        web browser that
-                        <a href="https://videojs.com/html5-video-support/" target="_blank"
-                        >supports HTML5 video</a
-                        >
-                    </p>
-                </video>
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank"
+                            >supports HTML5 video</a
+                            >
+                        </p>
+                    </video>
+                </div>
+
             </div>
         </section>
         <section id="what-we-do" class="what-we-do">
@@ -379,23 +382,23 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row justify-content-between align-items-center flex-wrap gap-3 mb-3">
-                            <a href="" class="partners-link">
-                                <img src="{{asset('img/part1.png')}} " alt="">
-                            </a>
-                            <a href="" class="partners-link">
+{{--                            <a href="https://ukraine.un.org" class="partners-link" target="_blank">--}}
+                                <img class="partners-link" src="{{asset('img/part1.png')}} " alt="" >
+{{--                            </a>--}}
+                            <a href="https://street-child.org" class="partners-link"  target="_blank">
                                 <img src="{{asset('img/part2.png')}}" alt="">
                             </a>
-                            <a href="" class="partners-link">
+                            <a href="https://www.ohchr.org" class="partners-link" target="_blank">
                                 <img src="{{asset('img/part3.png')}}" alt="">
                             </a>
 
-                            <a href="" class="partners-link">
+                            <a href="https://www.unhcr.org/ua/" class="partners-link" target="_blank">
                                 <img src="{{asset('img/part4.png')}}" alt="">
                             </a>
-                            <a href="" class="partners-link">
+                            <a href="https://vuso.ua/" class="partners-link" target="_blank">
                                 <img src="{{asset('img/part5.png')}}" alt="">
                             </a>
-                            <a href="" class="partners-link">
+                            <a href="https://www.uda.org.ua" class="partners-link"  target="_blank">
                                 <img src="{{asset('img/part6.png')}}" alt="">
                             </a>
                         </div>
@@ -409,18 +412,21 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row justify-content-between align-items-center flex-wrap gap-3 mb-3">
-                            <a href="" class="partners-link">
-                                <img src="{{asset('img/class1.png')}}" alt="">
-                            </a>
-                            <a href="" class="partners-link">
-                                <img src="{{asset('img/class2.png')}}" alt="">
-                            </a>
-                            <a href="" class="partners-link">
-                                <img src="{{asset('img/class3.png')}}" alt="">
-                            </a>
-                            <a href="" class="partners-link">
-                                <img src="{{asset('img/class4.png')}}" alt="">
-                            </a>
+{{--                            <a href="https://www.wfp.org/" class="partners-link">--}}
+                                <img class="partners-link" src="{{asset('img/class1.png')}}" alt="" target="_blank">
+{{--                            </a>--}}
+{{--                            <a href="" class="partners-link">--}}
+                                <img class="partners-link" src="{{asset('img/class2.png')}}" alt="">
+{{--                            </a>--}}
+{{--                            <a href="" class="partners-link">--}}
+                                <img class="partners-link" src="{{asset('img/class3.png')}}" alt="">
+{{--                            </a>--}}
+{{--                            <a href="" class="partners-link">--}}
+                                <img class="partners-link" src="{{asset('img/class4.png')}}" alt="">
+{{--                            </a>--}}
+{{--                            <a href="" class="partners-link">--}}
+{{--                                <img src="{{asset('img/class5.jpg')}}" alt="">--}}
+{{--                            </a>--}}
 
                         </div>
 

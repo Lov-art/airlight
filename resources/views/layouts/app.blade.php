@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('page-title')</title>
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/favicon.ico')}}">
     @section('layout-assets')
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{{--        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">--}}
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <link rel="stylesheet" href="{{asset('css/media.css')}}">
 
@@ -77,7 +81,7 @@
             </div>
         </div>
 
-        <form class="col-md-8" id="mail-form" action="{{route('mail',['lang' => app()->getLocale()])}}" method="post">
+        <form class="col-md-8 " id="mail-form" action="{{route('mail',['lang' => app()->getLocale()])}}" method="post">
 
             <input type="hidden" name="form_name" value="send_mail" >
 
@@ -114,7 +118,7 @@
                 <div class="col-md-6">
                     <div class="input-box">
                         <label for="tel">Номер телефона* </label>
-                        <input type="text" id="tel" name="tel" placeholder="+380 (|ХХ) ХХХ ХХ ХХ ">
+                        <input type="text" id="tel" name="tel" placeholder="+380 (XХХ) ХХХ ХХ ХХ ">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -308,18 +312,37 @@
 
 
         </form>
+        <div id="success-form-box d-none" class="success-form-box d-flex justify-content-center align-items-center col-md-8">
+                <p class="section-title">Дякуємо за звернення! <br>
+
+                    Найближчим часом ми зв'яжемося з Вами</p>
+        </div>
     </div>
 </div>
 
 @section('layout-scripts')
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+{{--    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>--}}
+{{--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>--}}
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/imask"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='{{asset('js/main.js')}}'></script>
 @show
 <script>
-    let mail_form = $('#mail-form')
+    let mail_form = $('#mail-form');
+    let success_box = document.getElementById('success-form-box')
     let success_block = document.getElementById('success-text')
+
+
+
+    let phoneMask = IMask(
+        document.getElementById('tel'), {
+            mask: '+{3}(000)000-00-00'
+        });
+
+
 
     $('.form-submit').on('click', ()=>{
         $.ajax({
@@ -347,6 +370,8 @@
                    }
                 },
                 200:function (resp){
+                    mail_form.addClass('d-none')
+                    success_box.removeClass('d-none')
                     success_block.innerHTML='SUCCESS!'
                 }
             }
