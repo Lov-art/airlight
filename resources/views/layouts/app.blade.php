@@ -118,7 +118,7 @@
                 <div class="col-md-6">
                     <div class="input-box">
                         <label for="tel">Номер телефона* </label>
-                        <input type="text" id="tel" name="tel" placeholder="+380 (XХХ) ХХХ ХХ ХХ ">
+                        <input type="text" id="tel" name="tel" placeholder="+38 (XХХ) ХХХ ХХ ХХ ">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -339,7 +339,7 @@
 
     let phoneMask = IMask(
         document.getElementById('tel'), {
-            mask: '+{3}(000)000-00-00'
+            mask: '+{38 }(000){ }000-00-00'
         });
 
 
